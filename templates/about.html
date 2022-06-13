@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About Jobox</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+        <link rel="icon" href="{{ url_for('static',filename='img/icon.png') }}" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.png') }}" alt="logo"> <!--{{ url_for('static',filename='logo.png') }}-->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="{{url_for('index')}}">Home</a></li>
+                    <li><a href="{{url_for('about')}}">About Jobox</a></li>
+                </ul>
+            </nav>
+            <a class="git" href="https://github.com/sinungadi"><button>Github</button></a>
+        </header>
+        <section class="about">
+            <div class="content">
+                <img src="{{ url_for('static',filename='img/interview.jpg') }}">
+                <div class="text">
+                    <h1>What is Jobox?</h1>
+                    <p>Jobox is a website that makes it easy for job seekers to find the best jobs based on their resume or CV. 
+                        We provide job recommendations by matching applicants' skills and job descriptions using artificial intelligence. 
+                        It will reduce the time in looking for a job instead of searching and checking every job posting and whether 
+                        we are eligible to apply for this job or not. Users only need to enter their resume or CV then our program will 
+                        provide jobs that match the user's skills</p>
+                </div>
+            </div>
+        </section>
+        <section class="team">
+            <h1><span>Meet Our Team</span></h1>
+            <div class="container">
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="{{ url_for('static',filename='img/sinung.png') }}">
+                        </div>
+                        <div class="contentBx">
+                            <h4>Sinung Adi Nugroho</h4>
+                            <h5>Project Manager</h5>
+                        </div>
+                        <div class="sci">
+                            <a href="https://www.instagram.com/sinungadingrh/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/sinung-adi-nugroho/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="mailto:sinungadingrh@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="{{ url_for('static',filename='img/farhan.png') }}">
+                        </div>
+                        <div class="contentBx">
+                            <h4>Farhan Ghafara</h4>
+                            <h5>Developer</h5>
+                        </div>
+                        <div class="sci">
+                            <a href="https://www.instagram.com/gha_farhan07/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/farhan-ghafara/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="mailto:farhanghafara07@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="{{ url_for('static',filename='img/ricardo.png') }}">
+                        </div>
+                        <div class="contentBx">
+                            <h4>Ricardo Simbolon</h4>
+                            <h5>Developer</h5>
+                        </div>
+                        <div class="sci">
+                            <a href="https://www.instagram.com/ricardoaidens/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/ricardo-aidens-b61726235/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="mailto:ricardosbl05@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="imgBx">
+                            <img src="{{ url_for('static',filename='img/andhika.png') }}">
+                        </div>
+                        <div class="contentBx">
+                            <h4>Andhika Bayu Amarta</h4>
+                            <h5>Product Designer</h5>
+                        </div>
+                        <div class="sci">
+                            <a href="https://www.instagram.com/andhikabayu_01/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/andhika-bayu-amarta-779259172/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="mailto:gtforce885@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="copyright">
+                <small>Copyright &copy; 2022 - Jobox. All Rights Reserved</small>
+            </div>
+        </footer>
+        <script src="" async defer></script>
+    </body>
+</html>

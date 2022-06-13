@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jobox Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/style.css') }}"> <!---{{ url_for('static',filename='styles/style.css') }}-->
+        <link rel="icon" href="{{ url_for('static',filename='img/icon.png') }}" type="image/x-icon"> <!--{{ url_for('static',filename='icon.png') }}-->
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="{{ url_for('static',filename='img/logo.png') }}" alt="logo" width="144" height="72"> <!--{{ url_for('static',filename='logo.png') }}-->
+            <nav>
+                <ul class="navbar">
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('about')}}">About Jobox</a></li>
+                </ul>
+            </nav>
+            <a class="git" href="https://github.com/sinungadi"><button>Github</button></a>
+        </header>
+        <center>
+            <h1 class="title"> Upload Your Resume/CV</h1>
+            <form method="POST" action="/submit" enctype="multipart/form-data">
+                <label for="fileUpload" id="upload">
+                    <img src="{{ url_for('static',filename='img/file-upload.png') }}" alt=""> <!--{{ url_for('static',filename='file-upload.png') }}-->
+                    <span id="text">Choose File</span>
+                </label>
+                <input type="file" name="userfile" id="fileUpload" hidden>
+                <label for="submit">
+                    <img src="{{ url_for('static',filename='img/telegram.png') }}" alt=""> <!--{{ url_for('static',filename='telegram.png') }}-->
+                    <span>Submit</span>
+                </label>
+                <input type="submit" id="submit" hidden>
+            </form>
+            <div id="result" class="job_recommendation">
+                <table>
+                    <tr>
+                        {% for col in column_names %}
+                        <th>{{col}}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for row in row_data %}
+                    <tr>
+                        {% for col, row_ in zip(column_names, row) %}
+                        {% if col == link_column %}
+                        <td>
+                            <a href="{{row_}}">
+                                <button type="submit" value={{ row_ }} name="link" form="link_form" class="link_button">
+                                    Apply
+                                </button>
+                            </a>
+                        </td>
+                        {% else %}
+                        <td>{{row_}}</td>
+                        {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                
+                </table>
+            </div>
+        </center>
+        <footer>
+            <div class="copyright">
+                <small>Copyright &copy; 2022 - Jobox. All Rights Reserved</small>
+            </div>
+        </footer>
+        <script src="{{ url_for('static',filename='java/button.js') }}"></script> <!--{{ url_for('static',filename='java/button.js') }}-->
+    </body>
+</html>

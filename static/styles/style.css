@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+    background-color: #f0f8ff;
+}
+
+li, a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #2D4059;
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    width: 144px;
+    height: 72px;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover {
+    color: #2D4059;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(45, 64, 89, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(45, 64, 89, 0.8);
+}
+
+center h1 {
+    font-family: 'Montserrat Black';
+    color: #2D4059;
+}
+
+h2 {
+    font-family:'Montserrat Medium';
+    color: #2D4059;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Quicksand";
+}
+
+label {
+    background: #2D4059;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-radius: 30px;
+    padding: 0 25px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all ease-out 200ms;
+  }
+
+label:not(.chosen):hover {
+    background: #435f84;
+}
+
+label img {
+    width: 37px;
+    margin-right: 15px;
+}
+
+label.chosen {
+    background: #3AB52D;
+}
+
+table {
+    margin-top: 40px;
+    z-index: 2;
+    align-items: center;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 15px rgba(64,64,64,.7);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    width: 80%;
+}
+
+td, th {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+th{
+    background-color: #2D4059;
+    color: #fafafa;
+    font-family: 'Open Sans',Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+   
+}
+
+tr{
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .content img{
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.text {
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.content {
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text h1{
+    font-family: 'Roboto', sans-serif;
+    color: #2D4059;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.text p {
+    font-family: 'Roboto Regular', sans-serif;
+    color: #2D4059;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+.team{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bellota Text', cursive;
+}
+
+.team h1{
+    text-align: center;
+    margin: 100px auto 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    max-width: 550px;
+    position: relative;
+    color: #2D4059;
+    text-transform: uppercase;
+}
+
+.team h1:before{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #2D4059;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: -2;
+}
+
+.team h1:after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #2D4059;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -2;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .card
+{
+   width: 330px;
+   height: 416px;
+   padding: 60px 30px;
+   margin: 20px;
+   background: #f2f3f7;
+   box-shadow: 0.6em 0.6em 1.2em #d2dce9,
+               -0.5em -0.5em 1em #ffffff;
+   border-radius: 20px;
+}
+.container .card .content
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.container .card .content .imgBx
+{
+   width: 180px;
+   height: 180px;
+   border-radius: 50%;
+   position: relative;
+   margin-bottom: 20px;
+   overflow: hidden;
+}
+.container .card .content .imgBx img
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.container .card .content .contentBx h4
+{
+   color: #2D4059;
+   font-size: 1.7rem;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 1px;
+}
+.container .card .content .contentBx h5
+{
+   color: #6c758f;
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-align: center;
+}
+.container .card .content .sci
+{
+   margin-top: 20px;
+}
+.container .card .content .sci a
+{
+   text-decoration: none;
+   color: #6c758f;
+   font-size: 30px;
+   margin: 10px;
+   transition: color 0.4s;
+}
+.container .card .content .sci a:hover
+{
+   color: #0196e3;
+}
+
+footer {
+    padding: 30px 0;
+    color: #2D4059;
+    text-align: center;
+}
+
+@media screen and (max-width: 1170px){
+    header {
+        padding: 20px 10px 0;
+    }
+    .logo{
+        width: 90px;
+        height: 45px;
+    }
+    .navbar li{
+        padding: 0 7px;
+    }
+    .navbar li a{
+        font-size: 12px;
+    }
+    button {
+        font-size: 12px;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    center h1{
+        font-size: 24px;
+        margin-top: 50px;
+    }
+    label{
+        height: 40px;
+    }
+    label img{
+        width: 20px;
+        margin-right: 5px;
+    }
+    label span{
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .about{
+        width: 100%;
+        height: auto;
+        padding: 70px 0px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about .content img{
+        margin-bottom: 35px;
+    }
+    .text h1{
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    .team h1{
+        margin: 0 auto 30px;
+        font-size: 28px;
+    }
+
+    .team h1:before{
+        width: 60px;
+    }
+
+    .team h1:after{
+        width: 60px;
+    }
+
+    .container .card{
+    width: 280px;
+    height: 400px;
+    padding: 60px 30px;
+    margin: 20px;
+    border-radius: 20px;
+    }
+
+    .container .card .content .contentBx h4{
+    font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {    
+    td, th {
+        padding: 10px 15px;
+    }
+    td a button{
+        font-size: 10px;
+    }
+
+    th{
+        font-size: 10px;
+    }
+    
+    tr{
+        font-size: 10px;
+    }
+}
