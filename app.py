@@ -23,6 +23,8 @@ df = job.drop_duplicates(subset='test').reset_index(drop=True)
 df['clean'] = df['test'].apply(match.preprocessing)
 jobdesc = (df['clean'].values.astype('U'))
 
+
+
 app=Flask(__name__)
 
 os.makedirs(os.path.join(app.instance_path, 'resume_files'), exist_ok=True)
