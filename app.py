@@ -1,7 +1,6 @@
 import os
 import pandas as pd
 from flask import Flask,render_template,redirect,request
-from werkzeug.utils import secure_filename
 
 from resume_screening import resparser, match
 
@@ -24,7 +23,6 @@ df['clean'] = df['test'].apply(match.preprocessing)
 jobdesc = (df['clean'].values.astype('U'))
 
 
-
 app=Flask(__name__)
 
 os.makedirs(os.path.join(app.instance_path, 'resume_files'), exist_ok=True)
@@ -45,28 +43,28 @@ def home():
 
 @app.route('/submit',methods=['POST'])
 def submit_data():
-    if request.method == 'POST':
-        
+    if request.method == 'POST':        
         f=request.files['userfile']
-        f.save(os.path.join(app.instance_path, 'resume_files', secure_filename(f.filename)))
-        skills = resparser.skill('resume_files/{}'.format(f.filename))
-        skills.append(match.preprocessing(skills[0]))
-        del skills[0]
+        f.save(os.path.join(app.instance_path, 'resume_files', f.filename))
+        
+    skills = resparser.skill('instance/resume_files/{}'.format(f.filename))
+    skills.append(match.preprocessing(skills[0]))
+    del skills[0]
 
-        count_matrix = match.vectorizing(skills[0], jobdesc)
-        matchPercentage = match.coSim(count_matrix)
-        matchPercentage = pd.DataFrame(matchPercentage, columns=['Skills Match'])
+    count_matrix = match.vectorizing(skills[0], jobdesc)
+    matchPercentage = match.coSim(count_matrix)
+    matchPercentage = pd.DataFrame(matchPercentage, columns=['Skills Match'])
 
-        #Job Vacancy Recommendations
-        result_cosine = df[['title','company','link']]
-        result_cosine = result_cosine.join(matchPercentage)
-        result_cosine = result_cosine[['title','company','Skills Match','link']]
-        result_cosine.columns = ['Job Title','Company','Skills Match','Link']
-        result_cosine = result_cosine.sort_values('Skills Match', ascending=False).reset_index(drop=True).head(20)
+    #Job Vacancy Recommendations
+    result_cosine = df[['title','company','link']]
+    result_cosine = result_cosine.join(matchPercentage)
+    result_cosine = result_cosine[['title','company','Skills Match','link']]
+    result_cosine.columns = ['Job Title','Company','Skills Match','Link']
+    result_cosine = result_cosine.sort_values('Skills Match', ascending=False).reset_index(drop=True).head(20)
 
     return render_template('index.html', column_names=result_cosine.columns.values, row_data=list(result_cosine.values.tolist()),
                            link_column="Link", zip=zip)
 
 
-if __name__ =="__main__":    
+if __name__ =="__main__":
     app.run()
