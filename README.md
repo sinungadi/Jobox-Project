@@ -5,3 +5,7 @@ Jobox is a website that makes it easy for job seekers to find the best jobs base
 Requirements:
 - [Resume-Parser](https://pypi.org/project/resume-parser/)
 - [en_core_web_sm==2.3.1](https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz)
+
+
+Screenshots: <br>
+<img src="https://github.com/sinungadi/Jobox-Project/blob/d63388caba4935ab2cf19af514ca25854a89a0d2/screenshots/home-page.jpeg">
