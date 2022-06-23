@@ -7,5 +7,5 @@ Requirements:
 - [en_core_web_sm==2.3.1](https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz)
 
 
-Screenshots: <br>
-<img src="https://github.com/sinungadi/Jobox-Project/blob/d63388caba4935ab2cf19af514ca25854a89a0d2/screenshots/home-page.jpeg">
+Demo: <br>
+<img src="https://github.com/sinungadi/Jobox-Project/blob/331ac4d252351f1cbb5cd0e50e77b6f0f25ed0cc/screenshots/demo.gif" width="600px">
