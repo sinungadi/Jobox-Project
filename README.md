@@ -8,4 +8,4 @@ Requirements:
 
 
 Demo: <br>
-<img src="https://github.com/sinungadi/Jobox-Project/blob/331ac4d252351f1cbb5cd0e50e77b6f0f25ed0cc/screenshots/demo.gif" width="600px">
+<img src="https://github.com/sinungadi/Jobox-Project/blob/1f759489589d8026bc3a3f72c0b391cfe71632c1/screenshots/demo.gif" width="600px">
